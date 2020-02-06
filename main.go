@@ -18,9 +18,10 @@ import (
 	"strings"
 	"syscall"
 	"time"
+		_ "github.com/conradkirschner/selenoid-ui/tree/master/statik"
 
-	_ "github.com/aerokube/selenoid-ui/statik"
 )
+
 
 //go:generate statik -src=./ui/build
 

@@ -7,7 +7,7 @@ import * as serviceWorker from "./serviceWorker";
 const render = Component => {
     return ReactDOM.render(<Component />, document.getElementById("root"));
 };
-
+console.log("test");
 render(App);
 
 if (module.hot) {
