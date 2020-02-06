@@ -2,7 +2,7 @@
 
 set -e
 TAGNAME=$1
-GH_REF=github.com/aerokube/selenoid-ui.git
+GH_REF=github.com/aerokube/statik.git
 git config user.name "${TRAVIS_REPO_SLUG}"
 git config user.email "aerokube@aerokube.github.com"
 git remote add upstream "https://${GITHUB_TOKEN}@${GH_REF}"

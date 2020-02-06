@@ -1,7 +1,7 @@
 FROM scratch
 MAINTAINER Kirill Merkushev <lanwen@yandex.ru>
 
-COPY selenoid-ui /
+COPY statik/statik /
 
 #HEALTHCHECK --interval=1s --timeout=1s --start-period=2s --retries=3 CMD [ "/health-check" ]
 EXPOSE 8080

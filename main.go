@@ -18,7 +18,7 @@ import (
 	"strings"
 	"syscall"
 	"time"
-		_ "github.com/conradkirschner/selenoid-ui/tree/master/statik"
+		_ "github.com/conradkirschner/selenoid-ui/statik"
 
 )
 

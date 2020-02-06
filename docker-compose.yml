@@ -1,7 +1,7 @@
 version: "3"
 services:
   selenoid-ui:
-    image: "aerokube/selenoid-ui"
+    image: "aerokube/statik"
     network_mode: bridge
     ports:
       - "8080:8080"

@@ -1,8 +1,11 @@
 github.com/aandryashin/matchers v0.0.0-20161126170413-435295ea180e h1:ogUKYFNcdYUIBSLibE4+EjbTJazoHr5JsWWx21Lpn8c=
 github.com/aandryashin/matchers v0.0.0-20161126170413-435295ea180e/go.mod h1:cbmYNkm9xeQlNoWEPtOUcvNok2gSD7ErMnYkRW+eHi8=
+github.com/aerokube/selenoid-ui v0.0.0-20200204144154-664e0689280e h1:BTkPowoHDIDkO4izkI0CN9AUgnouKjQva7Y7CpPRdCk=
+github.com/aerokube/selenoid-ui v0.0.0-20200204144154-664e0689280e/go.mod h1:s8cdXHJvfUkyBN9H0vaTCwqrWmINdFKaRzPsfdTbSHw=
 github.com/aerokube/util v0.0.0-20181001032247-3a9b3f70da09 h1:T3Y7aciF+tYzT5wXHiwhLQNEozQHiyNDYXYDbi6EN2g=
 github.com/aerokube/util v0.0.0-20181001032247-3a9b3f70da09/go.mod h1:a1duJwYg3lfxakFPqpJsD41PYdkBmeUFPA4S+ISkHhQ=
 github.com/conradkirschner/selenoid-ui v0.0.0-20200206225258-1f6886ad5df4 h1:UJRpMS73nQoMdQRgoU64cvaPMkgxPF6XMc5bS7m3y5A=
+github.com/conradkirschner/selenoid-ui v0.0.0-20200206225642-eafbe576def0 h1:5FW67dVEGFxnbGb5e/XpdH8e7YiM1vOKM7GLyvP4bW0=
 github.com/gorilla/websocket v1.4.0 h1:WDFjx/TMzVgy9VdMMQi2K2Emtwi2QcUQsztZ/zLaH/Q=
 github.com/gorilla/websocket v1.4.0/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
 github.com/koding/websocketproxy v0.0.0-20180716164433-0fa3f994f6e7 h1:UPc4az2SLy5Usu+JKfOV4KtfzuRQXXUxY6QOWf9QBJU=
