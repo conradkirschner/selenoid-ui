@@ -32,6 +32,8 @@ type Session struct {
 // Sessions - used count and individual sessions for quota user
 type Sessions struct {
 	Count    int       `json:"count"`
+	Uuid     string    `json:"uuid"`
+	isMobile string    `json:"isMobile"`
 	Sessions []Session `json:"sessions"`
 }
 
@@ -43,6 +45,7 @@ type Version map[string]Quota
 
 // Browsers - browser names for versions
 type Browsers map[string]Version
+type Mobiles map[string]Version
 
 // State - current state
 type State struct {
@@ -73,6 +76,7 @@ type result struct {
 	State    State                  `json:"state"`
 	Origin   string                 `json:"origin"`
 	Browsers map[string]int         `json:"browsers"`
+	Mobiles  map[string]int         `json:"mobiles"`
 	Sessions map[string]sessionInfo `json:"sessions"`
 	Version  string                 `json:"version"`
 	Errors   []interface{}          `json:"errors"`
@@ -141,6 +145,7 @@ func Status(ctx context.Context, webdriverURI *url.URL, statusURI *url.URL, vers
 
 func toUI(state State, webdriverURI *url.URL, version string) result {
 	browsers := make(map[string]int)
+	mobiles := make(map[string]int)
 	sessions := make(map[string]sessionInfo)
 
 	for browser, version := range state.Browsers {
@@ -165,6 +170,7 @@ func toUI(state State, webdriverURI *url.URL, version string) result {
 		State:    state,
 		Origin:   webdriverURI.String(),
 		Browsers: browsers,
+		Mobiles:  mobiles,
 		Sessions: sessions,
 		Version:  version,
 		Errors:   make([]interface{}, 0),

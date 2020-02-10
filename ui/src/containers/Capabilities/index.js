@@ -15,6 +15,10 @@ import BeatLoader from "react-spinners/BeatLoader";
 import { useEventCallback } from "rxjs-hooks";
 
 const code = (browser = "UNKNOWN", version = "", origin = "http://selenoid-uri:4444") => {
+    console.log(browser);
+    console.log(origin);
+    console.log(version);
+
     return {
         yaml: `# selenium: "${origin}"
 # please note that real accessible selenoid uri can be different        
@@ -108,18 +112,27 @@ const Capabilities = ({ browsers = {}, origin, history }) => {
     const available = [].concat(
         ...Object.keys(browsers).map(name =>
             Object.keys(browsers[name]).map(version => {
+                let uuid = "undefined";
+                let isMobile = false;
+                Object.keys(browsers[name][version]).map(user => {
+                    uuid = browsers[name][version][user].uuid;
+                    isMobile = browsers[name][version][user].isMobile;
+                });
                 return {
                     value: `${name}_${version}`,
                     label: `${name}: ${version}`,
                     name,
+                    uuid,
+                    isMobile,
+                    browser: browsers[name],
                     version,
                 };
             })
         )
     );
-
-    const { name, version, value } = browser || {};
-    const caps = code(name, version, origin);
+    console.log(browser);
+    const { name, version, value, uuid, isMobile } = browser || {};
+    const caps = code(name, version, origin, isMobile, uuid);
 
     return (
         <StyledCapabilities>

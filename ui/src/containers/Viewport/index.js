@@ -28,6 +28,7 @@ import Separator from "../../components/Stats/Separator";
 const links = videos => {
     return [
         { href: "/", title: "STATS", exact: true },
+        { href: "/mobile/", title: "MOBILE", exact: true },
         { href: "/capabilities/", title: "CAPABILITIES", exact: true },
         ...(videos ? [{ href: "/videos", title: "VIDEOS", exact: true }] : []),
     ];
@@ -117,7 +118,7 @@ const Viewport = () => {
         },
         [onStatus]
     );
-
+    console.log(state);
     return (
         <>
             <GlobalStyle />
@@ -164,13 +165,17 @@ const Viewport = () => {
                     />
 
                     <Route exact={true} path="/" render={() => <Sessions sessions={sessions} query={query} />} />
-
+                    <Route exact={true} path="/mobile" render={() => <div>test</div>} />
                     <Route
                         exact={true}
                         path="/videos"
                         render={() => <Videos videos={state.videos || []} query={query} />}
                     />
-
+                    <Route
+                        exact={true}
+                        path="/mobile"
+                        render={() => <Videos videos={state.videos || []} query={query} />}
+                    />
                     <Route
                         exact={true}
                         path="/capabilities"
